@@ -35,7 +35,7 @@ function Product({ id, title, price, description, category, image }) {
         {category}
       </p>
 
-      <Image src={image} height={200} width={200} objectFit="contain" />
+      <Image src={image} height={200} width={200} objectFit="contain" alt="" />
 
       <h4 className="my-3">{title}</h4>
 
@@ -43,7 +43,7 @@ function Product({ id, title, price, description, category, image }) {
         {Array(rating)
           .fill()
           .map((_, i) => (
-            <StarIcon className="h-5 text-yellow-500" />
+            <StarIcon key={i} className="h-5 text-yellow-500" />
           ))}
       </div>
 

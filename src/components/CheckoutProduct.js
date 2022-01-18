@@ -39,7 +39,7 @@ function CheckoutProduct({
 
   return (
     <div className="grid grid-cols-5">
-      <Image src={image} height={200} width={200} objectFit="contain" />
+      <Image src={image} height={200} width={200} objectFit="contain" alt="" />
 
       {/* Middle */}
       <div className="col-span-3 mx-5">
