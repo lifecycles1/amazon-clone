@@ -1,3 +1,4 @@
+import { getSession } from "next-auth/react";
 import { passThroughSymbol } from "next/dist/server/web/spec-compliant/fetch-event";
 import Head from "next/head";
 import Banner from "../components/Banner";
@@ -26,6 +27,7 @@ export default function Home({ products }) {
 }
 
 export async function getServerSideProps(context) {
+  const session = await getSession(context);
   const products = await fetch("https://fakestoreapi.com/products").then(
     (res) => res.json()
   );
@@ -33,6 +35,7 @@ export async function getServerSideProps(context) {
   return {
     props: {
       products,
+      session,
     },
   };
 }
