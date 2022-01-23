@@ -1,3 +1,4 @@
+import React from "react";
 import { CheckCircleIcon } from "@heroicons/react/solid";
 import { useRouter } from "next/router";
 import Header from "../components/Header";
@@ -18,8 +19,8 @@ function success() {
             </h1>
           </div>
           <p>
-            Thank you for shopping with us. We'll send a confirmation once your
-            item has shipped, if you would like to check the status of your
+            Thank you for shopping with us. We&apos;ll send a confirmation once
+            your item has shipped, if you would like to check the status of your
             order(s) please press the link bellow.
           </p>
           <button
