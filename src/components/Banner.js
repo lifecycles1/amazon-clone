@@ -1,6 +1,5 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-import Image from "next/image";
 
 function Banner() {
   return (
@@ -24,7 +23,15 @@ function Banner() {
         </div>
 
         <div>
-          <img loading="lazy" src="https://i.imgur.com/Z89Vcd6.jpg" alt="" />
+          <img loading="lazy" src="https://i.imgur.com/hQk2Esi.jpg" alt="" />
+        </div>
+
+        <div>
+          <img loading="lazy" src="https://i.imgur.com/ZKdtK8y.jpg" alt="" />
+        </div>
+
+        <div>
+          <img loading="lazy" src="https://i.imgur.com/kf3pSs8.jpg" alt="" />
         </div>
       </Carousel>
     </div>

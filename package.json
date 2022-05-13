@@ -8,6 +8,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.6.1",
     "@heroicons/react": "^1.0.5",
     "@reduxjs/toolkit": "^1.7.1",
     "@stripe/stripe-js": "^1.22.0",
@@ -22,8 +23,9 @@
     "react": "17.0.2",
     "react-currency-formatter": "^1.1.0",
     "react-dom": "17.0.2",
+    "react-modal-hover": "^1.1.13",
     "react-redux": "^7.2.6",
-    "react-responsive-carousel": "^3.2.22",
+    "react-responsive-carousel": "^3.2.23",
     "stripe": "^8.198.0"
   },
   "devDependencies": {

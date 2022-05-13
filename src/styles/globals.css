@@ -4,7 +4,7 @@
 
 @layer components {
   .link {
-    @apply cursor-pointer hover:underline;
+    @apply cursor-pointer hover:ring-1 ring-white rounded-sm px-2 py-1
   }
 
   .button {
@@ -12,4 +12,5 @@
      border border-yellow-300 rounded-sm focus:ring-1 focus:ring-yellow-500
      focus:outline-none active:from-yellow-500;
   }
+
 }

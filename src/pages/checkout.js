@@ -7,6 +7,8 @@ import Currency from "react-currency-formatter";
 import { useSession } from "next-auth/react";
 import { loadStripe } from "@stripe/stripe-js";
 import axios from "axios";
+import Footer1 from "../components/Footer1";
+import Footer2 from "../components/Footer2";
 const stripePromise = loadStripe(process.env.stripe_public_key);
 
 function Checkout() {
@@ -48,9 +50,7 @@ function Checkout() {
 
           <div className="flex flex-col p-5 space-y-10 bg-white">
             <h1 className="text-3xl border-b pb-4">
-              {items.length === 0
-                ? "Your Amazon Basket is empty."
-                : "Shopping Basket"}
+              {items.length === 0 ? "Your Basket is empty." : "Shopping Basket"}
             </h1>
 
             {items.map((item, i) => (
@@ -95,6 +95,8 @@ function Checkout() {
           )}
         </div>
       </main>
+      <Footer1 />
+      <Footer2 />
     </div>
   );
 }

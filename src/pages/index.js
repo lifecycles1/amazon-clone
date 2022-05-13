@@ -1,7 +1,8 @@
 import { getSession } from "next-auth/react";
-import { passThroughSymbol } from "next/dist/server/web/spec-compliant/fetch-event";
 import Head from "next/head";
 import Banner from "../components/Banner";
+import Footer1 from "../components/Footer1";
+import Footer2 from "../components/Footer2";
 import Header from "../components/Header";
 import ProductFeed from "../components/ProductFeed";
 
@@ -9,7 +10,7 @@ export default function Home({ products }) {
   return (
     <div className="bg-gray-100">
       <Head>
-        <title>Amazon</title>
+        <title>LOGO</title>
       </Head>
 
       {/* Header */}
@@ -22,6 +23,11 @@ export default function Home({ products }) {
         {/* Product Feed */}
         <ProductFeed products={products} />
       </main>
+
+      <footer>
+        <Footer1 />
+        <Footer2 />
+      </footer>
     </div>
   );
 }

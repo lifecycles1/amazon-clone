@@ -21,10 +21,10 @@ function Header() {
         <div className="mt-3 flex items-center flex-grow sm:flex-grow-0">
           <Image
             onClick={() => router.push("/")}
-            src="https://i.imgur.com/zXhBKXi.png"
+            src="https://i.imgur.com/z3mFdF0.png"
             width={150}
             height={40}
-            objectFit="contain"
+            objectFit="cover"
             className="cursor-pointer"
             alt=""
           />
@@ -75,13 +75,13 @@ function Header() {
       </div>
 
       {/* bottom nav */}
-      <div className="flex items-center space-x-3 p-2 pl-6 bg-amazon_blue-light text-white text-sm">
+      <div className="flex items-center px-2 py-1 pl-6 bg-amazon_blue-light text-white text-sm">
         <p className="link flex items-center">
           <MenuIcon className="h-6 mr-1" />
           All
         </p>
         <p className="link">Prime Video</p>
-        <p className="link">Amazon Business</p>
+        <p className="link">LOGO Business</p>
         <p className="link">Today&#39;s Deals</p>
         <p className="link hidden lg:inline">Electronics</p>
         <p className="link hidden lg:inline">Food & Grocery</p>

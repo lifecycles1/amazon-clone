@@ -3,6 +3,8 @@ import { useSession, getSession } from "next-auth/react";
 import Header from "../components/Header";
 import moment from "moment";
 import Order from "../components/Order";
+import Footer1 from "../components/Footer1";
+import Footer2 from "../components/Footer2";
 
 function Orders({ orders }) {
   const { data: session } = useSession();
@@ -39,6 +41,8 @@ function Orders({ orders }) {
           )}
         </div>
       </main>
+      <Footer1 />
+      <Footer2 />
     </div>
   );
 }

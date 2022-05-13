@@ -5,6 +5,7 @@ import Currency from "react-currency-formatter";
 import { useDispatch } from "react-redux";
 import { addToBasket, selectItems } from "../features/counter/basketSlice";
 import { useSelector } from "react-redux";
+import { useRouter } from "next/router";
 
 const MAX_RATING = 5;
 
@@ -13,6 +14,7 @@ function Product({ id, title, price, description, category, image }) {
   const [rating] = useState(Math.floor(MAX_RATING * Math.random()) + 1);
   const [hasPrime] = useState(Math.random() < 0.5);
   const items = useSelector(selectItems);
+  const router = useRouter();
 
   const addItemToBasket = () => {
     const product = {
@@ -35,7 +37,14 @@ function Product({ id, title, price, description, category, image }) {
         {category}
       </p>
 
-      <Image src={image} height={200} width={200} objectFit="contain" alt="" />
+      <Image
+        src={image}
+        height={200}
+        width={200}
+        objectFit="contain"
+        alt=""
+        onClick={() => router.push(`products/${id}`)}
+      />
 
       <h4 className="my-3">{title}</h4>
 
