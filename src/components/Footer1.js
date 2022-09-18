@@ -4,17 +4,6 @@ import { useRouter } from "next/router";
 
 function Footer1() {
   const router = useRouter();
-  
-    const attempt = () => {
-    axios
-      .post("https://nonlinear.devcentre.nz/api/public/login", {
-        password: "String#13",
-        username: "tr001",
-      })
-      .then((response) => {
-        console.log("RESPONSE", response.data);
-      });
-  };
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -31,12 +20,6 @@ function Footer1() {
           onClick={scrollToTop}
         >
           Back to top
-        </button>
-<button
-          className="flex-grow w-full h-12 text-[#f1f1f1] text-sm font-medium"
-          onClick={attempt}
-        >
-          GRAVITY LOGIN
         </button>
       </div>
       <div className="flex space-x-28 justify-center bg-[#232f3e] pt-10 pb-24">
