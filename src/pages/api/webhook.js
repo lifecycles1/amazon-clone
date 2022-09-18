@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import { buffer } from "micro";
 import * as admin from "firebase-admin";
 
