@@ -22,11 +22,7 @@ export default async (req, res) => {
     let event;
     //verify that the EVENT posted came from stripe
     try {
-      event = stripe.webhooks.constructEvent(
-        payload,
-        signature,
-        endpointSecret
-      );
+      event = stripe.webhooks.constructEvent(payload, signature, endpointSecret);
     } catch (err) {
       console.log(`Webhook signature verification failed.`, err.message);
       return res.sendStatus(400);
@@ -52,13 +48,9 @@ export default async (req, res) => {
           })
           .then(() => {
             res.status(200);
-            console.log(
-              `SUCCESS: Order ${session.id} has been added to the DB`
-            );
+            console.log(`SUCCESS: Order ${session.id} has been added to the DB`);
           })
-          .catch((err) =>
-            res.status(400).send(`Webhook Error: ${err.message}`)
-          );
+          .catch((err) => res.status(400).send(`Webhook Error: ${err.message}`));
       };
       await handleAttachment();
     }

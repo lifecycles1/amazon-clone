@@ -17,34 +17,16 @@ function Product({ id, title, price, description, category, image }) {
   const router = useRouter();
 
   const addItemToBasket = () => {
-    const product = {
-      id,
-      title,
-      price,
-      rating,
-      description,
-      category,
-      image,
-      hasPrime,
-    };
+    const product = { id, title, price, rating, description, category, image, hasPrime };
 
     dispatch(addToBasket(product));
   };
 
   return (
     <div className="relative flex flex-col z-30 bg-white p-10 m-5">
-      <p className="absolute top-2 right-2 text-xs italic text-gray-400">
-        {category}
-      </p>
+      <p className="absolute top-2 right-2 text-xs italic text-gray-400">{category}</p>
 
-      <Image
-        src={image}
-        height={200}
-        width={200}
-        objectFit="contain"
-        alt=""
-        onClick={() => router.push(`products/${id}`)}
-      />
+      <Image src={image} height={200} width={200} objectFit="contain" alt="" onClick={() => router.push(`products/${id}`)} />
 
       <h4 className="my-3">{title}</h4>
 
